@@ -76,6 +76,9 @@ public class MonitoringInputStream extends InputStream {
     }
 
     public void close() throws IOException {
+    	if (null != stream) {
+    		stream.close();
+    	}
     }
 
     public synchronized void mark(int readlimit) {

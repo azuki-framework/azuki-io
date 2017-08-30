@@ -150,7 +150,7 @@ public class CSVReader {
                 bufferSize = readSize;
             }
             pt = 0;
-        } else if (pt + 1 > bufferSize) {
+        } else if (pt + 2 > bufferSize) {
             // 追加読み込みがサイズより大きい値を指定
             System.arraycopy(buffer, pt, buffer, 0, bufferSize - pt);
             bufferSize -= pt;
